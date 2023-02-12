@@ -1,0 +1,251 @@
+.container{
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid #999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.97);
+    z-index: 999999999;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: 85%;
+    height: 100%;
+    padding: 0.5rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* left */
+.left > a{
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0e38a3;
+}
+/* center */
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 40px;
+    width: 240px;
+    border: 1px solid #999;
+    border-radius: 20px;
+}
+
+.center > input{
+    padding-right: 0.5rem;
+    border: none;
+    outline: none;
+    border-right: 1px solid #333;
+}
+
+.center > .searchIcon{
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.center:focus-within{
+    border-color: #000;
+}
+
+.allUsersContainer{
+    position: absolute;
+    padding: 0.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    top: 3rem;
+    max-height: 300px;
+    overflow: auto;
+    background-color: #efefef;
+    border-radius: 12px;
+}
+
+.allUsersContainer > a > img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.allUsersContainer > a{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* right */
+.right{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+}
+
+.right > .icons{
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.profileUserImg{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* show modal and stuff... */
+.modal{
+    position: absolute;
+    z-index: 999;
+    top: 2rem;
+    right: -3rem;
+    height: 50px;
+    width: 150px;
+    background-color: #efefef;
+    padding: 0.5rem;
+    display: flex;
+    gap: 0.75rem;
+    border-radius: 12px;
+}
+
+.modal > span{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.updateProfileForm{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999999999;
+}
+
+.updateProfileWrapper{
+    position: relative;
+    background-color: #fff;
+    height: 70vh;
+    width: 35vw;
+    border-radius: 20px;
+}
+
+.updateProfileWrapper > h2{
+    text-align: center;
+    margin: 2.5rem 0;
+    margin-bottom: 5rem;
+}
+
+.updateProfileWrapper > form > div > label{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    margin-right: 1rem;
+}
+
+.updateProfileWrapper button{
+    margin-top: 0.5rem;
+}
+
+.removeIcon{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.mobileNav{
+    display: none;
+}
+
+/* RESPONSIVEE */
+@media only screen and (max-width: 768px){
+    .wrapper{
+        display: none;
+    }
+
+    .mobileNav{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hamburgerIcon{
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+        font-size: 28px;
+    }
+
+    .center > input{
+        background-color: transparent;
+    }
+
+    .mobileCloseIcon{
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+        font-size: 24px;
+    }
+
+    .navigation{
+        width: 75%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99999999;
+        background-color: #efefef;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .allUsersContainer{
+        top: 12rem;
+    }
+
+    .right{
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    .right > .icons{
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .modal{
+        background-color: #fff;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .updateProfileWrapper{
+        height: 80vh;
+        width: 40vw;
+    }
+}

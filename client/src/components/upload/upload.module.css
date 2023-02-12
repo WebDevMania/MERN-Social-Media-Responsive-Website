@@ -1,0 +1,82 @@
+.container{
+    height: calc(100vh - 60px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    height: 60vh;
+    width: 27.5vw;
+    border: 1px solid #333;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper > h2{
+    color: rgb(23, 16, 151);
+    text-align: center;
+    margin: 2.5rem 0;
+    font-size: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+}
+
+form>input{
+    width: 50%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #333;
+}
+
+form>label{
+    align-self: center;
+    width: 50%;
+    cursor: pointer;
+    transition: 150ms all;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+form>label:hover{
+    color: #444;
+}
+
+form>button{
+    outline: none;
+    background-color: blue;
+    color: #fff;
+    border-radius: 12px;
+    padding: 0.5rem 1.25rem;
+    font-size: 18px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+form>button:hover{
+    background-color: #fff;
+    border-color: blue;
+    color: blue;
+}
+
+/* responsive */
+@media only screen and (max-width: 992px){
+    .wrapper{
+        height: 62.5vh;
+        width: 32.5vw;
+    }
+}
+@media only screen and (max-width: 768px){
+    .wrapper{
+        height: 67.5vh;
+        width: 40vw;
+    }
+}

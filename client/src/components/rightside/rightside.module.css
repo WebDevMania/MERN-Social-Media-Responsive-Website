@@ -1,0 +1,37 @@
+.container{
+    height: fit-content;
+    width: 100%;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+.user{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.userData > span{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.profileUserImg{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 768px){
+   .container{
+      display: none;
+   }
+}

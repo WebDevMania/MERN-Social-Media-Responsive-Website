@@ -1,0 +1,87 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+}
+
+.commentLeft{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.commentData{
+    display: flex;
+    flex-direction: column;
+    margin-right: 1.5rem;
+    min-width: 100px;
+}
+
+.commentData >span:first-child{
+    font-weight: 500;
+}
+
+.commentTimeago{
+    font-size: 15px;
+    color: #666;
+}
+
+.commentText{
+    align-self: flex-start;
+    font-size: 15px;
+    color: #222;
+    width: 75%;
+    word-wrap: break-word;
+}
+
+.commentImg{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.commentRight{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.25rem;
+    cursor: pointer;
+}
+
+/* RESPONSIVEE */
+@media only screen and (max-width: 992px){
+    .commentImg{
+        height: 33px;
+        width: 33px;
+    }
+
+    .commentData{
+        display: flex;
+        flex-direction: column;
+        margin-right: 1.25rem;
+        min-width: 80px;
+    }
+
+    .comment{
+        padding: 0 1.5rem;
+    }
+
+    .commentText{
+        font-size: 14px;
+    }
+
+    .commentRight{
+        font-size: 15px;
+    }
+
+    .commentData> span:first-child{
+        font-size: 15px;
+    }
+
+    .commentData> span:last-child{
+        font-size: 14px;
+    }
+}
+

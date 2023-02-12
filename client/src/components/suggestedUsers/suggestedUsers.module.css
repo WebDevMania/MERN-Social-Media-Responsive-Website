@@ -1,0 +1,131 @@
+.container{
+    margin-top: 30px;
+}
+
+.wrapper{
+    width: 100%;
+    height: fit-content;
+}
+
+.myProfile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.profileUserImg{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profileData{
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    border-left: 1px solid #333;
+    padding-left: 0.5rem;
+}
+
+.profileData > span:first-child{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.profileData > span:last-child{
+    font-size: 15px;
+    color: #555;
+}
+
+/* suggested users */
+.suggestedUsers{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    gap: 1.5rem;
+}
+
+.title{
+    margin-top: 1.5rem;
+    white-space: nowrap;
+    font-size: 22px;
+}
+
+.suggestedUser{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.suggestedUser > a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.imgUser{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.suggestedUserData{
+    display: flex;
+    flex-direction: column;
+}
+
+.suggestedUserData > :first-child{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.suggestedMsg{
+    font-size: 15px;
+    color: #555;
+}
+
+.followBtn{
+    margin-left: auto;
+    border: none;
+    outline: none;
+    background-color: #999;
+    padding: 0.5rem 1.25rem;
+    border-radius: 12px;
+    color: #fff;
+    cursor: pointer;
+    transition: 150ms all;
+}
+
+.followBtn:hover{
+    color: #f4f4f4;
+    background-color: #888;
+}
+
+/* RESPONSIVEE */
+@media only screen and (max-width: 992px){
+    .profileData{
+        margin: 1.25rem 0;
+    }
+
+    .imgUser{
+        height: 45px;
+        width: 45px;
+    }
+
+    .suggestedUserData > span:first-child{
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .suggestedUserData > span:last-child{
+        font-size: 14px;
+    }
+
+    .suggestedUser{
+        gap: 1rem;
+    }
+}
+

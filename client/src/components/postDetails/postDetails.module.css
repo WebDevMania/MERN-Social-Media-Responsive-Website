@@ -1,0 +1,150 @@
+.container{
+    height: calc(100vh - 60px);
+    width: 100%;
+}
+
+.wrapper{
+    width: 75%;
+    height: 90%;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    display: flex;
+    border: 1px solid #333;
+}
+
+.left{
+    flex: 1;
+    height: 100%;
+    background-color: black;
+}
+
+.left > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.95;
+}
+
+.right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wrapperTopSide{
+    border-bottom: 1px solid #333;
+    width: 100%;
+}
+
+.topRightSide{
+    color: inherit;
+    text-decoration: none;
+    padding: 0.75rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.topRightSide > .profileImage{
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.userData{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.userData > span:first-child{
+    text-transform: capitalize;
+    color: #222;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.userData > span:last-child{
+    color: #444;
+    font-size: 15px;
+}
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    padding: 1.5rem 0.75rem;
+    height: 550px;
+    overflow-y: auto;
+}
+
+.noCommentsMsg{
+    margin: 2.5rem;
+    text-align: center;
+    font-size: 26px;
+}
+
+/* post comment section */
+.postCommentSection{
+    border-top: 1px solid #666;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.75rem;
+}
+
+.inputSection{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 17px;
+    width: 90%;
+    padding-left: 0.5rem;
+    transition: 150ms all;
+}
+
+.inputSection:focus{
+    padding-left: 1rem;
+}
+
+.postCommentSection>button{
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #285ad8;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 150ms all ease-in-out;
+}
+
+.postCommentSection > button:hover{
+    color: #2828ba;
+}
+
+.emptyCommentMsg,
+.longCommentMsg{
+    display: inline-block;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    color: #f00;
+    font-size: 18px;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 992px){
+    .wrapper{
+        margin: 3rem auto;
+    }
+
+    .inputSection{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .wrapper{
+        width: 90%;
+    }
+}

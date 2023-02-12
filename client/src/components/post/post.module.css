@@ -1,0 +1,236 @@
+.container{
+    min-height: 650px;
+    width: 100%;
+    margin-bottom: 5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.container:first-child{
+    margin-top: 0;
+}
+
+.wrapper{
+    overflow: hidden;
+    border-radius: 12px;
+    padding-bottom: 1rem;
+    height: 100%;
+    background-color: #f4f0f0;
+    border: 1px solid #333;
+    width: 90%;
+}
+
+/* top */
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.topLeft{
+    text-decoration: none;
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profileMetadata{
+    display: flex;
+    flex-direction: column;
+}
+
+.profileMetadata > span:first-child{
+   font-size: 18px;
+   font-weight: 500;
+}
+
+.profileMetadata > span:last-child{
+    font-size: 15px;
+    color: #555;
+}
+
+.profileUserImg{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.deleteModal{
+    position: absolute;
+    right: 1.5rem;
+    top: 2rem;
+    background-color: #878181;
+    color: #fff;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.buttons > button{
+    outline: none;
+    border: none;
+    padding: 0.2rem 0.4rem;
+    border-radius: 6px;
+}
+
+/* center */
+.center{
+    height: fit-content;
+    width: 100%;
+}
+
+.center > .desc{
+   font-size: 18px;
+   color: #333;
+   padding: 1rem;
+}
+
+
+.center > .location{
+    color: #333;
+    padding: 1rem;
+ }
+
+.center > .postImg{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* controls */
+
+.controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-size: 25px;
+}
+
+.controls.showComment{
+    border-bottom: 1px solid #333;
+}
+
+.controlsLeft{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    padding: 1.5rem 0.75rem;
+    padding-left: 0;
+    border-bottom: 1px solid #555;
+    max-height: 550px;
+    overflow: auto;
+}
+
+/* post comment section */
+.postCommentSection{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+}
+
+.inputSection{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 17px;
+    width: 90%;
+    padding-left: 0.5rem;
+    transition: 150ms all;
+}
+
+.inputSection:focus{
+    padding-left: 0.75rem;
+}
+
+.postCommentSection > button{
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #285ad8;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 150ms all ease-in-out;
+}
+
+.postCommentSection > button:hover{
+    color: #2828ba;
+}
+
+.emptyCommentMsg{
+    display: inline-block;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    color: #f00;
+    font-size: 18px;
+}
+
+/* RESPONSIVEE */
+@media only screen and (max-width: 992px){
+    .container{
+        min-height: 525px;
+    }
+
+    .center > .postImg{
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .center > .desc{
+        font-size: 16px;
+        padding: 0.75rem;
+    }
+
+    .comments{
+        gap: 1.5rem;
+        padding: 1.5rem 0.75rem;
+        padding-left: 0;
+        border-bottom: 1px solid #555;
+        max-height: 450px;
+        overflow: auto;
+    }
+
+    .inputSection{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .container{
+        min-height: 500px;
+        width: 300px;
+        margin-left: auto;
+        margin-bottom: 3rem;
+    }
+
+    .center > .postImg{
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .comment{
+        height: 400px;
+    }
+}

@@ -1,0 +1,53 @@
+.post{
+    height: 450px;
+    width: 325px;
+    border: 1px solid #999;
+    background-color: black;
+    position: relative;
+}
+
+.post > img{
+    opacity: 0.95;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    position: relative;
+    z-index: 9;
+}
+
+.post > img:hover{
+    opacity: 0.8;
+}
+
+.likes{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 992px){
+    .post{
+        height: 400px;
+        width: 275px;
+     }
+}
+
+@media only screen and (max-width: 768px){
+    .post{
+        height: 375px;
+        width: 225px;
+     }
+}
